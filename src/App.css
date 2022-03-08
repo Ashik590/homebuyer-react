@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://db.onlinewebfonts.com/c/eff97b96c351727f183d2f7dc0e88d67?family=Colored+Crayons');
+
+:root{
+    --poppins:'Poppins', sans-serif;
+    --colored:"Colored Crayons", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-family: 'Russo One', sans-serif;
+}
+.containers{
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 20px;
+}
+p{
+    margin-bottom: 0;
+}
+.logo{
+    height: 80px;
+}
+main{
+    background: url("./img/hero.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -4px;
+}
+#hero{
+    min-height: 460px;
+    display: flex;
+    padding-bottom: 40px;
+}
+.ques h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 2px 5px #000000ab;
+    margin-bottom: 25px;
+}
+.ques{
+    padding: 0 20px;
+    min-height: 450px;
+}
+.parent {
+    overflow: hidden;
+    max-width: 1000px;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+.slider{
+    display: grid;
+    grid-template-columns: repeat(3, 1000px);
+    transition: all .7s linear;
+}
+#go1{
+    display: grid;
+    grid-template-columns: repeat(4, 1000px);
+}
+#go2{
+    display: grid;
+    grid-template-columns: repeat(2, 1000px);
+}
+.call{
+    font-size: 24px;
+    line-height: 28px;
+}
+header{
+    font-family: var(--poppins);
+}
+.error {
+    color: #e91a1a;
+    background: #fff;
+    width: fit-content;
+    padding: 0px 8px;
+    font-weight: 600;
+    margin: auto;
+    position: relative;
+}
+.error::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color:#fff;
+}
+.btns {
+    border: 2px solid #fff;
+    padding: 5px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    background: #eca305;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all .3s ease;
+    font-size: 21px;
+}
+.btns:disabled{
+    opacity: .5;
+}
+.btns:disabled:hover{
+    background: #eca305;
+}
+.strong_scroll{
+    scroll-behavior: auto !important;
+}
+.conseq{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btns:hover{
+    background: #e28800;
+}
+.btns2{
+    background: #fff;
+    color: #1B7EAF;
+    font-weight: bold;
+}
+.btns2:hover{
+    background: rgb(236, 236, 236);
+    color: #1B7EAF;
+}
+.options {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    gap: 20px;
+}
+.options >div{
+    position: relative;
+    transition: all .2s ease;
+}
+.options >div .hole{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ddd;
+    right: 5px;
+    top: 5px;
+    transition: all .2s ease;
+    pointer-events: none;
+}
+.welcome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -8px;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    animation: fade 1s ease;
+}
+#video .arrow{
+    width: 200px;
+    position: absolute;
+    right: -110px;
+    top: 0%;
+}
+#video{
+    background: url("./img/hand.png") no-repeat 100% 100%;
+    background-size: 220px;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.options >div input:checked~.hole,
+.options >div input:checked~label .hole
+{
+    background-image: url("./img/checkmark.png");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    background-color: #fbad04;
+}
+.form-control:focus{
+    box-shadow: 0px 0px 1px 3px rgb(235, 212, 11);
+    border: 0;
+}
+.form-control{
+    outline: none;
+    background: #f5f5f5;
+}
+.options label {
+    background: #fff;
+    padding: 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    color: #3e3e3e;
+    height: 100%;
+    transition: all .3s ease;
+}
+.options label:hover{
+    background: rgb(238, 238, 238);
+}
+.options label *{
+    pointer-events: none;
+}
+#ques1 .options label:hover{
+    transform: scale(1.1);
+}
+#ques1 label img {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    object-position: bottom;
+}
+#ques1 label img {
+    height: 90px;
+    margin-bottom: 10px;
+}
+.options>div:not(#ques1 .options>div):hover{
+    transform: scale(1.1);
+}
+.options >div p{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(54, 54, 54);
+}
+#hero .form{
+    max-width: 540px;
+    margin: auto;
+    font-family: var(--poppins);
+}
+.same_day_form {
+    display: grid;
+    gap: 8px;
+}
+.ques1_main{
+    grid-template-columns: 2fr 1.5fr;
+}
+.same_day_form input {
+    width: 100%;
+    font-family: var(--poppins);
+    border: 0;
+    padding: 16px 23px;
+    border-radius: 33px;
+    background: #ffffffb3;
+}
+.same_day_form input:focus{
+    background: #fff;
+}
+.same_day_form button{
+    border-radius: 33px;
+    border-width: 5px;
+    margin-top: 10px;
+}
+.same_day_form input::placeholder{
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+}
+.submit,.submit:disabled:hover{
+    background: #ff8731;
+}
+.submit:hover{
+    background: #df6812;
+}
+.bar div{
+    height: 5px;
+    width: 0;
+    background-color: #ACE4FA;
+    transition: all .4s linear;
+}
+.bar{
+    width: 100%;
+    background-color: #1680A7;
+    position: relative;
+    top: -15px;
+    height: 5px;
+}
+#video .p-2 {
+    max-width: 700px;
+    margin-top: 30px;
+    padding: 0 !important;
+}
+#advantage h2{
+    font-weight:600;
+    position: relative;
+    margin-bottom: 15px;
+}
+.mb_20{
+    margin-bottom: 4.5rem !important;
+}
+.box {
+    padding: 40px 25px;
+    border: 2px solid #999999;
+    border-radius: 30px;
+    transition: all .3s ease;
+    display: flex;
+    gap: 15px;
+}
+.box h3{
+    color: #ECA305;
+    transition: all .3s ease;
+    margin-bottom: 7px;
+    font-size: 22px;
+}
+.box:hover h3{
+    color:#fff
+}
+.box img{
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+.box:hover{
+    background: #2A8FF4;
+    color: #fff;
+    border-color: #2A8FF4;
+}
+#advantage p{
+    color: rgb(87, 87, 87);
+    font-weight: 400;
+    transition: all .3s ease;
+}
+.box:hover p{
+    color: #fff !important;
+}
+.span3rd{
+    grid-column: 1/3;
+    width: 70%;
+    margin: auto;
+}
+footer{
+    background: #404343;
+    padding: 40px 25px;
+}
+.h11 {
+    padding: 15px 30px;
+    width: fit-content;
+    margin: auto;
+    background: #1D9BCE;
+    color: #fff;
+    border-radius: 33px;
+    text-align:center;
+}
+#quote .btns{
+    box-shadow: 0px 2px 3px 0px #62626282;
+    border: 0;
+    width: fit-content;
+    text-decoration: none;
+}
+#quote small a,
+#quote small a:hover
+{
+    color:#fff;
+}
+#quote{
+    padding: 55px 30px;
+    background: url("./img/quote.jpg") center center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+#writing li,#depo li {
+    font-size: 18px;
+    font-family: var(--poppins);
+    font-weight: 500;
+}
+#depo li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#depo{
+    background: url("./img/pencil-hand.png") no-repeat 0%, url("./img/pencil.png") no-repeat 100% 0%;
+}
+#depo h1{
+    font-family: var(--colored);
+    color: #f55343;
+}
+#writing{
+    background: url("./img/writing_bg1.png") 0% no-repeat,url("./img/writing_bg2.png") 100% no-repeat;
+    background-size: 145px,169px;
+}
+.check__~label{
+    height: 25px;
+    width: 25px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    transition: all .3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.check__:checked~label{
+    background:#EC820E;
+}
+.curve_text img {
+    width: 40px;
+    position: absolute;
+    right: -45px;
+    bottom: 25px;
+}
+.h12 {
+    text-transform: uppercase;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 15px;
+}
+.curve_text {
+    color: #fff;
+    line-height: 18px;
+    margin-top: 22px;
+    position: relative;
+    font-family: var(--poppins);
+}
+.toasts {
+    position: fixed;
+    background: #eca305;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 33px;
+    padding: 15px 25px;
+    animation: come .5s linear forwards;
+    box-shadow: 0px 0px 6px 0px #00000063;
+    z-index: 3;
+} 
+
+.same_day_form input[type=number]::-webkit-inner-spin-button,  
+.same_day_form input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+@keyframes come {
+    from{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes go {
+    from{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:1250px){
+    .h12{
+        max-width: 900px;
+    }
+    #video .arrow {
+        width: 170px;
+    }
+}
+@media screen and (max-width:1150px){
+    #video .arrow {
+        width: 150px;
+        right: -105px;
+    }
+    .h12{
+        max-width: 800px;
+        width: 77%;
+    }
+}
+@media screen and (max-width:1100px){
+    #video .p-2 {
+        max-width: 600px;
+    }
+}
+@media screen and (max-width:1050px) {
+    #writing {
+        background: url("./img/writing_bg1.png") 0% no-repeat,url("./img/writing_bg2.png") 100% 100% no-repeat;
+        background-size: 100px;
+    }
+    #writing ul{
+        max-width: 500px;
+    }
+    .parent {
+        max-width: 800px;
+    }
+    .slider{
+        grid-template-columns: repeat(3, 800px);
+    }
+    #go1{
+        grid-template-columns: repeat(4, 800px);
+    }
+    #go2{
+        grid-template-columns: repeat(2, 800px);
+    }
+    #ques1 label img {
+        height: 60px;
+    }  
+    #video {
+        background-size: 180px;
+    }  
+}
+@media screen and (max-width:980px) {
+    #video {
+        background-size: 150px;
+    }
+}
+@media screen and (max-width:950px){
+    #video .p-2 iframe {
+        height: 370px !important;
+    }
+    #video .p-2 {
+        max-width: 550px;
+    }
+    #video .arrow {
+        width: 100px;
+        right: -60px;
+    }
+}
+@media screen and (max-width:900px) {
+    #video{
+        background-size: 0px;
+    }
+    #depo {
+        background-size: 100px,auto;
+    }
+}
+@media screen and (max-width:850px) {
+    .same_day_form button{
+        margin-top: 5px;
+    }
+    .ques1_main{
+        grid-template-columns: 1fr;
+        gap: 25px !important;
+    }
+    .parent {
+        max-width: 700px;
+    }
+    .slider{
+        grid-template-columns: repeat(3, 700px);
+    }
+    #go1{
+        grid-template-columns: repeat(4, 700px);
+    }
+    #go2{
+        grid-template-columns: repeat(2, 700px);
+    }
+    .same_day_form input{
+        padding-block: 12px;
+    }
+    .ques:not(#ques1){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .curve_text img {
+        width: 35px;
+        right: -42px;
+        bottom: 8px;
+    }
+}
+@media screen and (max-width:800px) {
+    .curve_text img {
+        bottom: 33px;
+    }
+    .parent {
+        max-width: 500px;
+    }
+    .slider {
+        grid-template-columns: repeat(3, 500px);
+    }
+    #go1 {
+        grid-template-columns: repeat(4, 500px);
+    }
+    #go2 {
+        grid-template-columns: repeat(2, 500px);
+    }
+}
+@media screen and (max-width:740px){
+    #writing {
+        background: url("./img/writing_bg1.png") -5% no-repeat,url("./img/writing_bg2.png") 105% 100% no-repeat;
+        background-size: 100px;
+    }
+    .options label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .ques h1:not(#ques1 h1) {
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+    .ques {
+        min-height: 410px;
+    }
+    #hero{
+        min-height: 400px;
+    }
+    header{
+        gap: 20px;
+    }header > div:last-child {
+        width: 50%;
+    }
+    header > div:last-child p{
+        font-size: 15px;
+        margin-bottom: 0;
+        line-height: 20px;
+    }
+    header > div:last-child span:not(p span),
+    header > div:last-child b:not(p b)
+    {
+        font-size: 10px;
+        line-height: 13px;
+    }
+}
+@media screen and (max-width:700px) {
+    #depo h1{
+        max-width: 500px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:650px){
+    #video .arrow {
+        width: 80px;
+        right: auto;
+        left: 99%;
+        top: 10px;
+    }
+    #writing{
+        background-size: 0px;
+    }
+    #quote {
+        text-align: center;
+    }
+    #quote a{
+        margin: auto;
+    }
+}
+@media screen and (max-width:550px){
+    #depo {
+        background-size: 80px,45px;
+    }
+    .h12 {
+        width: 70%;
+    }
+    .options label{
+        padding: 22px;
+        font-size: 15px;
+    }
+    #ques1 label img{
+        height: 60px;
+    }
+    .options >div input:checked~.hole,
+    .options >div input:checked~label .hole
+    {
+        background-size: 14px;
+    }
+    .options >div .hole {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+    .options label p{
+        font-size: 15px;
+    }
+    .parent {
+        max-width: 400px;
+    }
+    .slider {
+        grid-template-columns: repeat(3, 400px);
+    }
+    #go1 {
+        grid-template-columns: repeat(4, 400px);
+    }
+    #go2 {
+        grid-template-columns: repeat(2, 400px);
+    }
+}
+@media screen and (max-width:480px) {
+    #depo {
+        background-size: 0;
+    }
+    #depo ul{
+        padding-left: 0;
+    }
+    .box{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:450px){
+    .btns {
+        font-size: 14px;
+    }
+    .h12 {
+        width: 80%;
+        margin-left: 0;
+    }
+    #video .p-2 iframe {
+        height: 300px !important;
+    }
+    #hero{
+        padding-bottom: 20px;
+        min-height: auto;
+        height: 100%;
+    }
+    .options label{
+        padding: 17px 22px;
+        font-size: 11px;
+    }
+    .ques {
+        min-height: auto;
+        height: auto;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        margin-top: 0 !important;
+    }
+    .options >div input:checked~.hole,
+    .options >div input:checked~label .hole
+    {
+        background-size: 14px;
+    }
+    .options >div .hole {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+    .options label p{
+        font-size: 11px;
+    }
+    .options >div:hover{
+        transform: scale(1.05);
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    #hero{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width:420px){
+    #writing li, #depo li{
+        font-size: 13px;
+    }
+    .options {
+        gap: 15px;
+    }
+}
+@media screen and (max-width:400px) {
+    .parent {
+        max-width: 350px;
+    }
+    .curve_text{
+        margin-top: 15px;
+    }
+    .slider {
+        grid-template-columns: repeat(3, 350px);
+    }
+    #go1 {
+        grid-template-columns: repeat(4, 350px);
+    }
+    #go2 {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
